@@ -4,7 +4,8 @@ Token Trap is a full-stack application that helps you find exposed secrets in Gi
 
 ## Demo
 
-https://github.com/user-attachments/assets/4ede1d9f-cbae-43ce-9820-9a8d0f35d470
+https://github.com/user-attachments/assets/c69a4b4b-ae69-4076-8bc7-2a34eebf1333
+
 
 ## Features
 
