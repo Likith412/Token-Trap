@@ -1,0 +1,316 @@
+.scans-container {
+  padding: 32px;
+  padding-top: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--color-text-main);
+  background: var(--color-bg);
+  min-height: 94vh;
+}
+
+.scans-heading {
+  margin-bottom: 32px;
+  color: var(--color-accent);
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.filters {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  background: var(--color-bg-card);
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 250px;
+  position: relative;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  font-size: 16px;
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 12px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text-main);
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(47, 255, 122, 0.15);
+}
+
+.filter-group .button-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.filter-group button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+  font-size: 16px;
+}
+
+.filter-group button.search-btn {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  box-shadow: 0 2px 8px 0 rgba(47, 255, 122, 0.08);
+}
+
+.filter-group button.search-btn:hover {
+  background: var(--color-accent-hover);
+}
+
+.filter-group button.clear-btn {
+  background: var(--color-border);
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+
+.filter-group button.clear-btn:hover {
+  background: var(--color-bg);
+  color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+.scans-table {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+th {
+  background: var(--color-bg-card);
+  font-weight: 700;
+  color: var(--color-accent);
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.loading {
+  text-align: center;
+  padding: 48px;
+  color: var(--color-accent);
+  font-size: 18px;
+}
+
+.error {
+  text-align: center;
+  padding: 32px;
+  color: var(--color-error);
+  background: rgba(255, 71, 87, 0.1);
+  border-radius: 8px;
+  margin: 16px 0;
+  border: 1px solid rgba(255, 71, 87, 0.2);
+}
+
+@media (max-width: 600px) {
+  .scans-container {
+    padding: 12px;
+    padding-top: 70px;
+  }
+  .scans-container h1 {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+  .filters {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    margin-bottom: 18px;
+  }
+  .filter-group {
+    min-width: 0;
+    width: 100%;
+    gap: 8px;
+  }
+  .filter-group label {
+    font-size: 14px;
+  }
+  .filter-group select,
+  .filter-group input {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .filter-group button {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  .scans-table {
+    border-radius: 8px;
+  }
+  table {
+    font-size: 13px;
+    min-width: 600px;
+  }
+  .scans-table {
+    overflow-x: auto;
+  }
+  th,
+  td {
+    padding: 10px;
+  }
+  .loading,
+  .error {
+    font-size: 14px;
+    padding: 18px;
+  }
+}
+
+/* Loader */
+.scans-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
+/* Failure */
+.scans-failure-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+  background: var(--color-bg-card);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.scans-failure-heading {
+  color: var(--color-text);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.scans-failure-text {
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+/* No Scans */
+.scans-empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+  background: var(--color-bg-card);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.scans-empty-heading {
+  color: var(--color-text);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.scans-empty-text {
+  color: var(--color-text-secondary);
+  font-size: 16px;
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 24px 0 8px 0;
+}
+.pagination button {
+  background: var(--color-bg-card);
+  color: var(--color-accent);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+  outline: none;
+}
+.pagination button:hover:not(:disabled) {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-color: var(--color-accent);
+}
+.pagination button.active {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-color: var(--color-accent);
+  cursor: default;
+}
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+@media (max-width: 600px) {
+  .pagination button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+  .pagination {
+    gap: 4px;
+  }
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 16px 0;
+}
+@media (max-width: 600px) {
+  .pagination-wrapper {
+    justify-content: center;
+    margin: 0 0 12px 0;
+  }
+}

@@ -1,0 +1,7 @@
+.env
+.DS_Store
+package-lock.json
+node_modules
+/backend/outputs/*
+!/backend/outputs/.gitkeep
+/backend/scripts/run-scan.sh

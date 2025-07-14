@@ -1,0 +1,127 @@
+.app-container {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+/* Loader */
+.app-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Failure */
+.app-failure-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--color-bg);
+}
+
+.app-failure-content {
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  background: var(--color-bg-card);
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.app-failure-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: var(--color-error);
+}
+
+.app-failure-heading {
+  color: var(--color-accent);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-family: var(--font-heading);
+}
+
+.app-failure-message {
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+  font-family: var(--font-primary);
+}
+
+.app-failure-retry-button {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  font-family: var(--font-primary);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.app-failure-retry-button:hover {
+  background: var(--color-accent-hover);
+  color: var(--color-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(47, 255, 122, 0.1);
+}
+
+.app-failure-retry-button:active {
+  transform: translateY(0);
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 480px) {
+  .app-failure-content {
+    padding: 24px;
+  }
+
+  .app-failure-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
+
+  .app-failure-heading {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .app-failure-message {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .app-failure-retry-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 360px) {
+  .app-failure-content {
+    padding: 20px;
+  }
+
+  .app-failure-icon {
+    font-size: 36px;
+  }
+
+  .app-failure-heading {
+    font-size: 18px;
+  }
+
+  .app-failure-message {
+    font-size: 13px;
+  }
+}

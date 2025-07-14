@@ -1,0 +1,84 @@
+.scan-row {
+  transition: background 0.18s;
+}
+
+.scan-row:hover {
+  background: var(--color-border);
+  transition: background 0.18s;
+}
+
+.status-badge {
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.running {
+  background: rgba(255, 221, 51, 0.18);
+  color: #e6b800;
+}
+
+.status-badge.completed {
+  background: rgba(47, 255, 122, 0.18);
+  color: var(--color-accent);
+}
+
+.status-badge.failed {
+  background: rgba(255, 71, 87, 0.18);
+  color: var(--color-error);
+}
+
+.status-badge.cancelled {
+  background: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.delete-btn {
+  padding: 6px 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.delete-btn:active {
+  background-color: #bd2130;
+}
+
+.cancel-btn {
+  padding: 6px 12px;
+  background-color: #ffcc00; /* yellow */
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.cancel-btn:hover {
+  background-color: #e6b800;
+}
+
+.cancel-btn:active {
+  background-color: #cc9900;
+}
+
+@media (max-width: 600px) {
+  .status-badge {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+}

@@ -1,0 +1,81 @@
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  padding: 16px;
+}
+
+.not-found-content {
+  text-align: center;
+  max-width: 600px;
+  padding: 32px;
+  background: var(--color-bg-card);
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.not-found h1 {
+  font-size: 60px;
+  margin: 0;
+  color: var(--color-accent);
+  text-shadow: none;
+}
+
+.not-found h2 {
+  font-size: 32px;
+  margin: 12px 0;
+  color: var(--color-text-main);
+}
+
+.not-found p {
+  font-size: 18px;
+  color: var(--color-text-secondary);
+  margin-bottom: 32px;
+}
+
+.home-button {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  font-family: var(--font-primary);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.home-button:hover {
+  background: var(--color-accent-hover);
+  color: var(--color-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(47, 255, 122, 0.1);
+}
+
+.home-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .not-found h1 {
+    font-size: 48px;
+  }
+
+  .not-found h2 {
+    font-size: 24px;
+  }
+
+  .not-found p {
+    font-size: 16px;
+  }
+
+  .home-button {
+    padding: 11px 24px;
+  }
+}

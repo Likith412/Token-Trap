@@ -1,0 +1,377 @@
+.startscan-container {
+  padding: 32px;
+  padding-top: 90px;
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--color-text-main);
+  background: var(--color-bg);
+  min-height: 93.7vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.7s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.startscan-heading {
+  color: var(--color-accent);
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.startscan-heading .icon {
+  font-size: 2.2rem;
+  color: var(--color-accent);
+  vertical-align: middle;
+}
+
+.startscan-form {
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  animation: fadeIn 0.7s;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.startscan-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.startscan-form label {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.startscan-form input {
+  padding: 16px;
+  background: var(--color-bg-card);
+  border: 1.5px solid var(--color-border-secondary);
+  border-radius: 8px;
+  font-size: 17px;
+  color: var(--color-text-main);
+  transition: all 0.3s cubic-bezier(0.4, 2, 0.6, 1);
+  outline: none;
+}
+
+.startscan-form input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(47, 255, 122, 0.18);
+  background: var(--color-bg);
+}
+
+.startscan-form input:hover {
+  background: var(--color-bg);
+  border-color: var(--color-accent-hover);
+}
+
+.startscan-button {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 12px 16px;
+  font-size: 17px;
+  transition: background 200ms, color 200ms, transform 300ms, box-shadow 300ms;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: none;
+}
+
+.startscan-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.startscan-button:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+  color: var(--color-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 12px rgba(47, 255, 122, 0.15);
+}
+
+.startscan-button .icon {
+  font-size: 1.3em;
+  margin-right: 6px;
+}
+
+.startscan-divider {
+  width: 100%;
+  max-width: 420px;
+  border: none;
+  border-top: 1.5px solid var(--color-border-secondary);
+  margin: 24px 0 0 0;
+  opacity: 0.7;
+}
+
+.startscan-error {
+  color: var(--color-error);
+  background: rgba(255, 71, 87, 0.1);
+  border-radius: 8px;
+  margin: 16px 0;
+  padding: 12px 18px;
+  border: 1px solid rgba(255, 71, 87, 0.2);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.startscan-status-section {
+  margin-top: 32px;
+  width: 100%;
+  max-width: 420px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  text-align: center;
+  animation: fadeIn 0.7s;
+}
+
+.startscan-status-label {
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.startscan-loader {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.startscan-summary {
+  margin-top: 18px;
+  text-align: left;
+}
+
+.startscan-summary h2 {
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.startscan-summary-pre {
+  background: var(--color-bg);
+  color: var(--color-text-main);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.98rem;
+  margin-bottom: 16px;
+  overflow-x: auto;
+  border: 1px solid var(--color-border-secondary);
+}
+
+.startscan-report-link {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px 0 rgba(47, 255, 122, 0.08);
+}
+
+.startscan-report-link:hover {
+  background: var(--color-accent-hover);
+}
+
+.startscan-cancel-btn {
+  background: var(--color-error);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 18px;
+  display: inline-block;
+  box-shadow: 0 2px 8px 0 rgba(255, 71, 87, 0.08);
+}
+
+.startscan-cancel-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.startscan-cancel-btn:hover:not(:disabled) {
+  background: #c82333;
+}
+
+.startscan-summary-grid {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 18px;
+  margin-top: 10px;
+  justify-content: flex-start;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--color-bg-card);
+  border-radius: 10px;
+  padding: 18px 24px;
+  min-width: 140px;
+  box-shadow: 0 2px 8px 0 rgba(47, 255, 122, 0.07);
+  border: 1px solid var(--color-border-secondary);
+}
+
+.summary-label {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.summary-value {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  letter-spacing: 1px;
+}
+
+.summary-value.org {
+  color: #2fff7a;
+}
+.summary-value.user {
+  color: #16e16a;
+}
+
+.startscan-summary-alt {
+  margin-top: 18px;
+  text-align: left;
+}
+
+.summary-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.summary-pill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(47, 255, 122, 0.04);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 7px 14px;
+  min-width: 100px;
+  box-shadow: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.summary-pill.org {
+  border-color: var(--color-border);
+}
+.summary-pill.user {
+  border-color: var(--color-border);
+}
+.pill-icon {
+  font-size: 1.1em;
+  color: var(--color-accent);
+}
+.pill-value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-right: 4px;
+}
+.pill-label {
+  color: var(--color-text-secondary);
+  font-size: 0.97rem;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .startscan-container {
+    padding: 12px;
+    padding-top: 90px;
+  }
+  .startscan-heading {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+  }
+  .startscan-form {
+    padding: 0;
+    max-width: 100%;
+  }
+  .startscan-status-section {
+    padding: 0;
+    max-width: 100%;
+  }
+  .startscan-summary-pre {
+    font-size: 0.85rem;
+    padding: 7px;
+  }
+  .startscan-divider {
+    max-width: 100%;
+  }
+  .startscan-summary-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .summary-item {
+    min-width: 0;
+    width: 100%;
+    padding: 12px 14px;
+  }
+  .summary-value {
+    font-size: 1.3rem;
+  }
+  .summary-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .summary-pill {
+    min-width: 0;
+    width: 100%;
+    padding: 7px 10px;
+    font-size: 0.97rem;
+    margin-bottom: 2px;
+  }
+  .pill-value {
+    font-size: 0.98rem;
+  }
+}
